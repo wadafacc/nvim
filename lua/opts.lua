@@ -1,5 +1,5 @@
 vim.o.number = true
-vim.opt.smarttab = true
+vim.smarttab = true
 vim.o.tabstop = 4
 vim.o.softtabstop = 4
 vim.o.shiftwidth = 4

@@ -11,3 +11,7 @@ vim.o.smartcase = true
 vim.o.fileencoding = 'utf-8'
 vim.o.termguicolors = true
 
+vim.o.background ='dark'
+vim.o.termguicolors=true
+
+vim.cmd [[highlight NvimTreeFolderIcon guibg=blue]]

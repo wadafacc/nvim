@@ -26,9 +26,6 @@ return require('packer').startup(function()
 	use { 'saadparwaiz1/cmp_luasnip' } --, opt = true
 	use { 'onsails/lspkind.nvim' }
 
--- COC
-	use {'neoclide/coc.nvim'}
-
 -- color hightlighting
 	use {'norcalli/nvim-colorizer.lua', ft={'css'},config = function() require 'colorizer'.setup() end }
 

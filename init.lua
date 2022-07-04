@@ -9,7 +9,7 @@ require 'plugins'
 require 'mappings'
 
 --theme
-vim.cmd [[colorscheme onedarkpro]]
+vim.cmd [[colorscheme nord]]
 
 vim.cmd([[
   augroup RestoreCursorShapeOnExit

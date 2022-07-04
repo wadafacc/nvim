@@ -19,13 +19,15 @@ return require('packer').startup(function()
 -- ZEY ARE IN ZE TREEES
 	use {'kyazdani42/nvim-tree.lua',cmd={'NvimTreeToggle','NvimTreeOpen'}, config = function() require 'configs.TREE.tree' end}
 	use { 'kyazdani42/nvim-web-devicons', config = function () require 'configs.QOL.devicons' end }
+-- bufferline
+	use {'akinsho/bufferline.nvim', tag = "v2.*", requires = 'kyazdani42/nvim-web-devicons'}
 
 -- good ol' dashboard
 	use {'glepnir/dashboard-nvim', config = function() require 'configs.QOL.dashboard' end }
 	
 -- themes
 	use {'olimorris/onedarkpro.nvim', config = function() require 'themes.onedark' end}
-
+	use {'shaunsingh/nord.nvim'}
     -- lsp
     use {
       'neovim/nvim-lspconfig',
@@ -60,18 +62,16 @@ return require('packer').startup(function()
       }
     }
 
-
-
-
 -- color hightlighting
 	use {'norcalli/nvim-colorizer.lua', ft={'css'},config = function() require 'colorizer'.setup() end }
 
 -- tree sitter (syntax highlighting)
-	use {'nvim-treesitter/nvim-treesitter', config = function() require 'configs.TREE.treesitter' end}  
+	use {'nvim-treesitter/nvim-treesitter', config = function() require 'configs.TREE.treesitter' end} 
 
 -- floaty term
 	use {'akinsho/toggleterm.nvim',config = function() require 'configs.QOL.toggleterminal' end}
-
+-- lualine
+	use {'nvim-lualine/lualine.nvim', config = function() require 'configs.QOL.lualine' end,requires = { 'kyazdani42/nvim-web-devicons',opt=true}}
 -- which key
 	use { "folke/which-key.nvim", config = function() require("which-key").setup {} end}
 end)
